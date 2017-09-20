@@ -3,8 +3,8 @@ close all
 clc
 
 nbrOfNeurons=200;
-nbrOfPatterns=26;
-nbrOfRuns=1;
+nbrOfPatterns=40;
+nbrOfRuns=20;
 beta=2;
 simulationTime=80000;
 %nbrOfBits=100000;
