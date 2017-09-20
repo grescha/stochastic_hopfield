@@ -3,10 +3,10 @@ close all
 clc
 
 nbrOfNeurons=200;
-nbrOfPatterns=5;
+nbrOfPatterns=40;
 nbrOfRuns=20;
 beta=2;
-simulationTime=8000;
+simulationTime=80000;
 
 subplot(1,1,1)
 axis([0 simulationTime 0 1.2])
@@ -31,3 +31,7 @@ title('Order parameter $m_{1}$ for 20 independent simulations', ...
   'Interpreter', 'latex', 'FontSize', 20)
 xlabel('Iteration', 'FontSize', 24)
 ylabel('$m_{1}$', 'Interpreter', 'latex', 'FontSize', 24)
+axis([0, simulationTime, 0, 1.05])
+xTick = get(gca, 'XTick');
+set(gca, 'FontSize', 16);
+
