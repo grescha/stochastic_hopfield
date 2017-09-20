@@ -4,9 +4,9 @@ clc
 
 nbrOfNeurons=200;
 nbrOfPatterns=40;
-nbrOfRuns=20;
+nbrOfRuns=1;
 beta=2;
-simulationTime=80000;
+simulationTime=40000;
 %nbrOfBits=100000;
 %nbrOfUnstable=0;
 %k=0;
@@ -25,6 +25,8 @@ for i=1:nbrOfRuns %for the different number of patterns
     m1Vector(j) = m1;
     state = AsynchronousUpdate(state,weightsMatrix,beta);
   end
+  m1cum = cumsum(m1Vector)./(1:simulationTime)';
 plot(1:simulationTime,m1Vector,'color',rand(1,3))
+plot(1:simulationTime,m1cum,'color',rand(1,3))
 end
 
