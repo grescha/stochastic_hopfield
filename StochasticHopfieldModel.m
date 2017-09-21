@@ -24,7 +24,7 @@ for i=1:nbrOfRuns %for the different number of patterns
     state = AsynchronousUpdate(state,weightsMatrix,beta);
   end
   m1cum = cumsum(m1Vector)./(1:simulationTime)';
-  plot(1:simulationTime,m1cum,'color',rand(1,3))
+  plot(1:simulationTime,m1cum,'color',rand(1,3), 'LineWidth', 1.2)
 end
 
 title('Order parameter $m_{1}$ for 20 independent simulations', ...
